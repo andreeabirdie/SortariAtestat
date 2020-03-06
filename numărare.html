@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sortare prin numărare</title>
+<meta charset="utf-8">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<noscript>
+<link rel="stylesheet" href="css/skel-noscript.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-n1.css">
+</noscript>
+</head>
+<body class="inserție">
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <h4 id="logo"><a href="Pagina principală.html">Pagina principală</a></h4>
+    <nav id="nav">
+      <ul>
+        <li><a href="bubble.html">Bubblesort</a></li>
+        <li><a href="inserare.html">Sortare prin inserare</a></li>
+        <li class="break"><a href="numărare.html">Sortare prin numărare</a></li>
+		<li><a href="selecție.html">Sortare prin selecție</a></li>
+      </ul>
+    </nav>
+  </div>
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="main">
+      <div class="8u">
+        <article id="content">
+          <header>
+            <h2>Sortare prin numărare</h2>
+            <span>Sortare prin numărarea elementelor mai mici decât elementul curent.</span></header>
+			<p>Sortarea prin numărare sorteaza elementele unui vector, acestea fiind distincte între ele 2 căte două. Acest tip de sortare folosește alți doi vectori, unul în care sunt rescrise elementele în ordine crescătoare, și unul care reține locul elementelor în noul vector</p>
+			<p>Algoritm determină frecvența de apariție a fiecărui element și în plus numaără elementele mai mici. În acest fel se poate obține, pentru fiecare element din tabloul nesortat, poziția sa din tabloul sortat. Algoritmul are în vedere și situația în care elementele se pot repeta.<br>
+			 Se vor folosi 3 tablouri:<br>
+			Tabloul v - cel care trebuie sortat<br>
+			Tabloul NR - cel în care contorizam câte elemente sunt mai mici decât elementul curent<br>
+			Tabloul x - cel în care obținem elementele sortate</p>
+        </article>
+      </div>
+      <div class="4u">
+        <section id="sidebar">
+		<section> <a href="#" class="image full"><img src="images/numar.jpg" alt=""></a>
+          </section>
+          <section>
+            <header>
+              <h3>Implementare în C++</h3>
+            </header>
+            <p>for(i=1;i<=n;i++)<br>
+			&nbsp NR[i]=0;<br>
+			for(i=1;i<=n;i++)<br>
+			&nbsp {for(j=i+1;j<=n;j++)<br>
+			&nbsp &nbsp if(v[i]>v[j])<br>
+			&nbsp &nbsp &nbsp NR[i]++;<br>
+			&nbsp &nbsp else NR[j]++;<br>
+			&nbsp x[NR[i]+1]=v[i];<br>
+			&nbsp }</p>
+            <ul class="actions">
+              <li><a href="numarare.exe" class="button">Încearcă programul aici</a></li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

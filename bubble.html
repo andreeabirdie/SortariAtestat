@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Bubblesort</title>
+<meta charset="utf-8">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<noscript>
+<link rel="stylesheet" href="css/skel-noscript.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-n1.css">
+</noscript>
+</head>
+<body class="bubble">
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <h4 id="logo"><a href="Pagina principală.html">Pagina principală</a></h4>
+    <nav id="nav">
+      <ul>
+        <li><a href="bubble.html">Bubblesort</a></li>
+        <li><a href="inserare.html">Sortare prin inserare</a></li>
+        <li class="break"><a href="numărare.html">Sortare prin numărare</a></li>
+		<li><a href="selecție.html">Sortare prin selecție</a></li>
+      </ul>
+    </nav>
+  </div>
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="main">
+      <div class="4u">
+        <section id="sidebar">
+		 </section>
+          <section>
+            <header>
+              <h3>Implementare în C++</h3>
+            </header>
+            <p>do<br>
+			{OK=0;<br>
+			for(i=1;i<=n-1;i++)<br>
+			&nbsp if(v[i]>v[i+1])<br>
+			&nbsp &nbsp {int aux=v[i];<br>
+			&nbsp &nbsp v[i]=v[i+1];<br>
+			&nbsp &nbsp v[i+1]=aux;<br>
+			&nbsp &nbsp OK=1;<br>
+			&nbsp &nbsp }<br>
+			}while(OK==1);</p>
+			<ul class="actions">
+              <li><a href="bubble.exe" class="button">Încearcă programul aici</a></li>
+            </ul>
+        </section>
+		<section> <a href="#" class="image full"><img src="images/bubble.gif" alt=""></a>
+          </section>
+      </div>
+      <div class="8u skel-cell-mainContent">
+        <article id="content">
+          <header>
+            <h2>Bubblesort</h2>
+            <span>Sortarea prin compararea vecinilor</span> </header>
+			<a href="#" class="image full"><img src="images/pic02.jpg" alt=""></a>
+			<p>Bubblesort sau sortarea prin compararea vecinilor este una din cele mai ușoare metode de sortare a vectorilor, dar este foarte ineficientă.</p>
+		  <p>Să ne imaginăm că avem un număr n de creioane colorate și vrem să le ordonăm crescător după mărime. Algoritmul Bubblesort va lucra astfel: începem din partea stângă și comparăm primele două creioane. Dacă acestea sunt ordonate corect nu se întâmplă nimic. Dacă ele nu sunt în ordinea corectă, le vom schimba pozițiile între ele. Facem același lucru cu creioanele 2 și 3, apoi 3 și 4, etc. La un moment dat vom întâlni creionul cu cea mai mare mărime și vom continua să schimbăm creioanele, două câte două, până când acesta ajunge la capătul liniei.</p>
+          <p>Vom relua comparațiile din partea stângă, și se va întâmpla același lucru pentru creionul cu a doua cea mai mare mărime. Continuăm acest exercițiu până când nu mai este nevoie să schimbăm poziția niciunui creion.	</p>
+
+          <p>Deși este un algoritm foarte usor de înțeles, el este ineficient, fiind necesari n<sup>2</sup> pași în cazul cel mai defavorabil.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

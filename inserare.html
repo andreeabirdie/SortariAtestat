@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sortare prin inserare</title>
+<meta charset="utf-8">
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.dropotron.js"></script>
+<script src="js/skel.min.js"></script>
+<script src="js/skel-panels.min.js"></script>
+<script src="js/init.js"></script>
+<noscript>
+<link rel="stylesheet" href="css/skel-noscript.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-n1.css">
+</noscript>
+</head>
+<body class="inserție">
+<div id="header-wrapper">
+  <div id="header" class="container">
+    <h4 id="logo"><a href="Pagina principală.html">Pagina principală</a></h4>
+    <nav id="nav">
+      <ul>
+        <li><a href="bubble.html">Bubblesort</a></li>
+        <li><a href="inserare.html">Sortare prin inserare</a></li>
+        <li class="break"><a href="numărare.html">Sortare prin numărare</a></li>
+		<li><a href="selecție.html">Sortare prin selecție</a></li>
+      </ul>
+    </nav>
+  </div>
+<div class="wrapper">
+  <div class="container">
+    <div class="row" id="main">
+      <div class="8u">
+        <article id="content">
+          <header>
+            <h2>Sortare prin inserare</h2>
+            <span>Sortarea prin inserare mimează modul în care un jucător de cărți își așează cărțile în mână pe parcurs ce le extrage din pachet.</span> </header>
+			<p>Să presupunem că avem același număr n de creioane colorate neordonate. Pentru sortarea prin inserție vom proceda astfel: comparăm primele două creioane și dacă nu sunt în ordinea corectă, le vom schimba pozițiile între ele. Acum, putem considera că primele două creioane formează un șir ordonat. Vom compara, apoi, al treilea creion cu cel de-al doilea. Dacă al treilea creion trebuie așezat înainte de al doilea, le vom schimba pozițiile și apoi îl vom compara cu primul creion, schimbându-le pozițiile dacă este necesar. Astfel, primele 3 creioane sunt în ordinea corectă.</p>
+			<p>Vom continua să inserăm câte un creion la șirul ordonat și să îl plasăm în poziția corectă, până când toate creioanele vor fi în ordine.</p>
+		  <p>Numărul estimativ de pași în acest caz este de n(n+1)/4.</p>
+        </article>
+      </div>
+      <div class="4u">
+        <section id="sidebar">
+		<section> <a href="#" class="image full"><img src="images/cărți.jpg" alt=""></a>
+          </section>
+          <section>
+            <header>
+              <h3>Implementare în C++</h3>
+            </header>
+            <p>cin>>n>>v[1];<br>
+			for(i=2;i<=n;i++)<br>
+			&nbsp {cin>>x;<br>
+			&nbsp j=i-1;<br>
+			&nbsp while(j>=i&&v[j]>x)<br>
+			&nbsp &nbsp {v[j+1}=v[j];<br>
+			&nbsp &nbsp  j--;<br>
+			&nbsp &nbsp }<br>
+			&nbsp v[j+1]=x;<br>
+			&nbsp }</p>
+            <ul class="actions">
+              <li><a href="inserare.exe" class="button">Încearcă programul aici</a></li>
+            </ul>
+          </section>
+          </section>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
